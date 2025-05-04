@@ -1,0 +1,4 @@
+[font]
+normal = { family = "Hack Nerd Font" }
+size = 10.5
+builtin_box_drawing = true

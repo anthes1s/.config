@@ -1,0 +1,21 @@
+# Ignore everything
+*
+
+# except...
+!.gitignore
+
+# Alacritty configs
+!alacritty/
+!alacritty/**
+
+# Hyprland configs
+!hypr/
+!hypr/**
+
+# Waybar configs
+!waybar/
+!waybar/**
+
+# Neovim configs
+!nvim/
+!nvim/**

@@ -1,0 +1,41 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-center": ["clock"],
+  "modules-right": ["cpu", "memory", "battery", "network", "wireplumber"],
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+
+  "clock": {
+    "format": "{:%Y-%m-%d %H:%M:%S}"
+  },
+
+  "cpu": {
+    "format": "{icon}    {usage}%",
+    "format-icons": [""]
+  },
+
+  "memory": {
+    "format": "{icon} {used:0.1f}G/{total:0.1f}G",
+    "format-icons": [""]
+  },
+
+  "battery": {
+    "format": "{icon}    {capacity}%",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "network": {
+    "format-wifi": "{icon}    {essid} ({signalStrength}%)",
+    "format-ethernet": "LAN: {ifname}",
+    "format-disconnected": "No Network",
+    "format-icons": [""]
+  },
+
+  "wireplumber": {
+    "format": "{icon}    {volume}%",
+    "format-muted": "MUTED",
+    "scroll-step": 5,
+    "format-icons": ["", "", "", ""]
+  }
+}
+
