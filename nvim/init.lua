@@ -1,15 +1,17 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 --
-vim.api.nvim_set_keymap('', 'j', 'h', { noremap = true })
-vim.api.nvim_set_keymap('', 'k', 'j', { noremap = true })
-vim.api.nvim_set_keymap('', 'l', 'k', { noremap = true })
-vim.api.nvim_set_keymap('', ';', 'l', { noremap = true })
+vim.keymap.set('', 'j', 'h', { noremap = true })
+vim.keymap.set('', 'k', 'j', { noremap = true })
+vim.keymap.set('', 'l', 'k', { noremap = true })
+vim.keymap.set('', ';', 'l', { noremap = true })
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { silent = true, noremap = true })
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
