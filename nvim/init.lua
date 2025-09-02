@@ -1,3 +1,5 @@
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 --
 vim.api.nvim_set_keymap('', 'j', 'h', { noremap = true })
 vim.api.nvim_set_keymap('', 'k', 'j', { noremap = true })
@@ -191,6 +193,15 @@ require('lazy').setup({
   --
   -- See `:help gitsigns` to understand what the configuration keys do
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
+    {
+      'nvim-tree/nvim-tree.lua',
+      config = {
+        sort = { sorter = 'case_sensitive' },
+        view = { width = 30 },
+        renderer = { group_empty = true },
+        filters = { dotfiles = false },
+      },
+    },
     'lewis6991/gitsigns.nvim',
     opts = {
       signs = {
