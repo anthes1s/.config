@@ -2,7 +2,7 @@ window#waybar {
   color: white;
 
   background-color: rgba(25, 25, 25, 0.90);
-  border: 2px solid rgba(176, 0, 255, 0.933);
+  border: 1px solid rgba(176, 0, 255, 0.933);
 
   margin: 0px;
   padding: 0px;
@@ -23,7 +23,7 @@ window#waybar {
 }
 
 #custom-end {
-  margin-right: 6px;
+  margin-right: 2px;
 }
 
 #custom-power-off-button {
@@ -31,11 +31,19 @@ window#waybar {
   transition: background 0.25s, color 0.25s, border 0.25s;
 }
 
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#battery:hover,
+#wireplumber:hover,
+#custom-docker.docker-up:hover,
+#custom-docker.docker-down:hover,
+#network:hover,
 #custom-power-off-button:hover {
-  background-color: rgba(255, 0, 0, 0.3);
-  border-top: 2px solid rgba(176, 0, 255, 0.933);
-  border-bottom: 2px solid rgba(176, 0, 255, 0.933);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid rgba(176, 0, 255, 0.933);
+  border-bottom: 1px solid rgba(176, 0, 255, 0.933);
+  color: black;
 }
 
 #workspaces button {
@@ -50,16 +58,16 @@ window#waybar {
 }
 
 #custom-docker.docker-up {
-  border-top: 2px solid rgba(176, 0, 255, 0.933);
-  border-bottom: 2px solid rgba(176, 0, 255, 0.933);
+  border-top: 1px solid rgba(176, 0, 255, 0.933);
+  border-bottom: 1px solid rgba(176, 0, 255, 0.933);
   background-color: rgba(0, 255, 0, 0.3);
   color: white;
   padding: 0 8px;
 }
 
 #custom-docker.docker-down {
-  border-top: 2px solid rgba(176, 0, 255, 0.933);
-  border-bottom: 2px solid rgba(176, 0, 255, 0.933);
+  border-top: 1px solid rgba(176, 0, 255, 0.933);
+  border-bottom: 1px solid rgba(176, 0, 255, 0.933);
   background-color: rgba(255, 0, 0, 0.3);
   color: white;
   padding: 0 8px;

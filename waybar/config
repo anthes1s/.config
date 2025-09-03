@@ -26,7 +26,7 @@
 
   "custom/docker": {
     "format": " {}",
-    "exec": "bash -c 'if systemctl is-active --quiet docker.service; then echo \"{\\\"text\\\": \\\"UP\\\", \\\"class\\\": \\\"docker-up\\\"}\"; else echo \"{\\\"text\\\": \\\"DOWN\\\", \\\"class\\\": \\\"docker-down\\\"}\"; fi'",
+    "exec": "bash -c 'if systemctl is-active --quiet docker.service; then echo \"{\\\"text\\\": \\\"up\\\", \\\"class\\\": \\\"docker-up\\\"}\"; else echo \"{\\\"text\\\": \\\"down\\\", \\\"class\\\": \\\"docker-down\\\"}\"; fi'",
     "return-type": "json",
     "interval": 5,
   },
@@ -60,7 +60,7 @@
   },
 
   "memory": {
-    "format": " {used:0.1f}G/{total:0.1f}G"
+    "format": " {used:0.1f}g/{total:0.1f}g"
   },
 
   "battery": {
@@ -68,9 +68,11 @@
   },
 
   "network": {
-    "format-wifi": "  {essid} {signalStrength}%",
+    "format-wifi": " ",
     "format-ethernet": "  {ifname}",
-    "format-disconnected": ""
+    "format-disconnected": "",
+    "tooltip": true, 
+    "tooltip-format": "{essid} {signalStrength}%"
   },
 
   "wireplumber": {
