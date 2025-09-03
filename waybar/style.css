@@ -27,6 +27,7 @@ window#waybar {
 }
 
 #custom-power-off-button {
+  padding-right: 7px;
   transition: background 0.25s, color 0.25s, border 0.25s;
 }
 

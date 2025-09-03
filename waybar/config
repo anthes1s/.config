@@ -22,12 +22,13 @@
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "width": 1910,
   "height": 26,
+  "output": "eDP-1",
 
   "custom/docker": {
-    "format": "docker: {}",
+    "format": " {}",
     "exec": "bash -c 'if systemctl is-active --quiet docker.service; then echo \"{\\\"text\\\": \\\"UP\\\", \\\"class\\\": \\\"docker-up\\\"}\"; else echo \"{\\\"text\\\": \\\"DOWN\\\", \\\"class\\\": \\\"docker-down\\\"}\"; fi'",
     "return-type": "json",
-    "interval": 1,
+    "interval": 5,
   },
 
   "custom/end": {
@@ -46,34 +47,34 @@
   },
 
   "custom/power-off-button": {
-    "format": "power off",
+    "format": "",
     "on-click": "systemctl poweroff"
   },
 
   "clock": {
-    "format": "{:%Y-%m-%d %H:%M:%S}"
+    "format": "{:%Y-%m-%d %H:%M}"
   },
 
   "cpu": {
-    "format": "CPU: {usage}%"
+    "format": " {usage}%"
   },
 
   "memory": {
-    "format": "RAM: {used:0.1f}G/{total:0.1f}G"
+    "format": " {used:0.1f}G/{total:0.1f}G"
   },
 
   "battery": {
-    "format": "BAT: {capacity}%"
+    "format": "  {capacity}%"
   },
 
   "network": {
-    "format-wifi": "WIFI: {essid} ({signalStrength}%)",
-    "format-ethernet": "LAN: {ifname}",
-    "format-disconnected": "No Network"
+    "format-wifi": "  {essid} {signalStrength}%",
+    "format-ethernet": "  {ifname}",
+    "format-disconnected": ""
   },
 
   "wireplumber": {
-    "format": "VOL: {volume}%",
-    "format-muted": "VOL: MUTED"
+    "format": "  {volume}%",
+    "format-muted": ""
   }
 }
