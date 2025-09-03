@@ -4,6 +4,9 @@
 # except...
 !.gitignore
 
+# Configs
+!install_prerequisites.sh
+
 # Alacritty configs
 !alacritty/
 !alacritty/**
