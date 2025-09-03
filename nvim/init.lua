@@ -700,7 +700,6 @@ require('lazy').setup({
           return {
             timeout_ms = 1000,
             lsp_format = 'fallback',
-            async = true,
           }
         end
       end,
