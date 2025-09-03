@@ -2,40 +2,78 @@
   "layer": "top",
   "position": "top",
   "modules-center": ["clock"],
-  "modules-right": ["cpu", "memory", "battery", "network", "wireplumber"],
+  "modules-right": [
+    "custom/start",
+    "cpu", 
+    "custom/separator", 
+    "memory",
+    "custom/separator", 
+    "battery",
+    "custom/separator", 
+    "network",
+    "custom/separator", 
+    "wireplumber",
+    "custom/separator", 
+    "custom/docker",
+    "custom/separator",
+    "custom/power-off-button",
+    "custom/end"
+  ],
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "width": 1910,
+  "height": 26,
+
+  "custom/docker": {
+    "format": "docker: {}",
+    "exec": "bash -c 'if systemctl is-active --quiet docker.service; then echo \"{\\\"text\\\": \\\"UP\\\", \\\"class\\\": \\\"docker-up\\\"}\"; else echo \"{\\\"text\\\": \\\"DOWN\\\", \\\"class\\\": \\\"docker-down\\\"}\"; fi'",
+    "return-type": "json",
+    "interval": 1,
+  },
+
+  "custom/end": {
+    "format": "]",
+    "tooltip": false
+  },
+
+  "custom/start": {
+    "format": "[",
+    "tooltip": false
+  },
+
+  "custom/separator": {
+    "format": "|",
+    "tooltip": false
+  },
+
+  "custom/power-off-button": {
+    "format": "power off",
+    "on-click": "systemctl poweroff"
+  },
 
   "clock": {
     "format": "{:%Y-%m-%d %H:%M:%S}"
   },
 
   "cpu": {
-    "format": "{icon}    {usage}%",
-    "format-icons": [""]
+    "format": "CPU: {usage}%"
   },
 
   "memory": {
-    "format": "{icon} {used:0.1f}G/{total:0.1f}G",
-    "format-icons": [""]
+    "format": "RAM: {used:0.1f}G/{total:0.1f}G"
   },
 
   "battery": {
-    "format": "{icon}    {capacity}%",
-    "format-icons": ["", "", "", "", ""]
+    "format": "BAT: {capacity}%"
   },
 
   "network": {
-    "format-wifi": "{icon}    {essid} ({signalStrength}%)",
+    "format-wifi": "WIFI: {essid} ({signalStrength}%)",
     "format-ethernet": "LAN: {ifname}",
-    "format-disconnected": "No Network",
-    "format-icons": [""]
+    "format-disconnected": "No Network"
   },
 
   "wireplumber": {
-    "format": "{icon}    {volume}%",
-    "format-muted": "MUTED",
-    "scroll-step": 5,
-    "format-icons": ["", "", "", ""]
+    "format": "VOL: {volume}%",
+    "format-muted": "VOL: MUTED"
   }
 }
-
