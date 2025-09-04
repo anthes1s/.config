@@ -6,6 +6,7 @@
 
 # Configs
 !install_prerequisites.sh
+!.bashrc
 
 # Alacritty configs
 !alacritty/
