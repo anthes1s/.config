@@ -1,4 +1,7 @@
 {
+  "margin-top": 4,
+  "margin-right": 5,
+  "margin-left": 5,
   "layer": "top",
   "position": "top",
   "modules-center": ["clock"],
@@ -22,7 +25,6 @@
     "custom/end"
   ],
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "width": 1910,
   "height": 26,
 
   "custom/ppd": {
