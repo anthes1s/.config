@@ -14,6 +14,8 @@
     "custom/separator", 
     "wireplumber",
     "custom/separator", 
+    "custom/ppd",
+    "custom/separator", 
     "custom/docker",
     "custom/separator",
     "custom/power-off-button",
@@ -23,11 +25,18 @@
   "width": 1910,
   "height": 26,
 
+  "custom/ppd": {
+    "format": "{}",
+    "exec": "bash -c 'profile=$(powerprofilesctl get 2>/dev/null || echo \"unknown\"); case \"$profile\" in performance) icon=\"\"; cls=\"performance\";; balanced) icon=\"\"; cls=\"balanced\";; \"power-saver\") icon=\"\"; cls=\"power-saver\";; *) icon=\"?\"; cls=\"unknown\";; esac; printf \"{\\\"text\\\": \\\"%s %s\\\", \\\"class\\\": \\\"%s\\\"}\\n\" \"$icon\" \"$profile\" \"$cls\"'",
+    "return-type": "json",
+    "interval": 3,
+  },
+
   "custom/docker": {
     "format": " {}",
     "exec": "bash -c 'if systemctl is-active --quiet docker.service; then echo \"{\\\"text\\\": \\\"up\\\", \\\"class\\\": \\\"docker-up\\\"}\"; else echo \"{\\\"text\\\": \\\"down\\\", \\\"class\\\": \\\"docker-down\\\"}\"; fi'",
     "return-type": "json",
-    "interval": 5,
+    "interval": 3,
   },
 
   "custom/end": {

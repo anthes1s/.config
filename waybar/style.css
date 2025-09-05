@@ -18,6 +18,7 @@ window#waybar {
 #network,
 #wireplumber,
 #custom-docker,
+#custom-ppd,
 #custom-power-off-button {
   padding: 0px 2px;
 }
@@ -31,20 +32,7 @@ window#waybar {
   transition: background 0.25s, color 0.25s, border 0.25s;
 }
 
-#clock:hover,
-#cpu:hover,
-#memory:hover,
-#battery:hover,
-#wireplumber:hover,
-#custom-docker.docker-up:hover,
-#custom-docker.docker-down:hover,
-#network:hover,
-#custom-power-off-button:hover {
-  background-color: rgba(255, 255, 255, 1);
-  border-top: 1px solid rgba(176, 0, 255, 0.933);
-  border-bottom: 1px solid rgba(176, 0, 255, 0.933);
-  color: black;
-}
+
 
 #workspaces button {
   border-radius: 0px;
@@ -62,7 +50,6 @@ window#waybar {
   border-bottom: 1px solid rgba(176, 0, 255, 0.933);
   background-color: rgba(0, 255, 0, 0.3);
   color: white;
-  padding: 0 8px;
 }
 
 #custom-docker.docker-down {
@@ -70,5 +57,38 @@ window#waybar {
   border-bottom: 1px solid rgba(176, 0, 255, 0.933);
   background-color: rgba(255, 0, 0, 0.3);
   color: white;
-  padding: 0 8px;
+}
+
+#custom-ppd.performance {
+  border-top: 1px solid rgba(176, 0, 255, 0.933);
+  border-bottom: 1px solid rgba(176, 0, 255, 0.933);
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+#custom-ppd.balanced {
+  border-top: 1px solid rgba(176, 0, 255, 0.933);
+  border-bottom: 1px solid rgba(176, 0, 255, 0.933);
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+#custom-ppd.power-saver {
+  border-top: 1px solid rgba(176, 0, 255, 0.933);
+  border-bottom: 1px solid rgba(176, 0, 255, 0.933);
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#battery:hover,
+#wireplumber:hover,
+#custom-docker.docker-up:hover,
+#custom-docker.docker-down:hover,
+#network:hover,
+#custom-ppd:hover,
+#custom-power-off-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+  border-top: 1px solid rgba(176, 0, 255, 0.933);
+  border-bottom: 1px solid rgba(176, 0, 255, 0.933);
+  color: black;
 }
