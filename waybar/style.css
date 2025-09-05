@@ -2,7 +2,7 @@ window#waybar {
   color: white;
 
   background-color: rgba(25, 25, 25, 1);
-  border: 1px solid rgba(176, 0, 255, 0.933);
+  border: 1px solid rgba(90, 79, 207, 0.933);
 
   margin: 0px;
   padding: 0px;
@@ -46,34 +46,34 @@ window#waybar {
 }
 
 #custom-docker.docker-up {
-  border-top: 1px solid rgba(176, 0, 255, 0.933);
-  border-bottom: 1px solid rgba(176, 0, 255, 0.933);
+  border-top: 1px solid rgba(90, 79, 207, 0.933);
+  border-bottom: 1px solid rgba(90, 79, 207, 0.933);
   background-color: rgba(0, 255, 0, 0.3);
   color: white;
 }
 
 #custom-docker.docker-down {
-  border-top: 1px solid rgba(176, 0, 255, 0.933);
-  border-bottom: 1px solid rgba(176, 0, 255, 0.933);
+  border-top: 1px solid rgba(90, 79, 207, 0.933);
+  border-bottom: 1px solid rgba(90, 79, 207, 0.933);
   background-color: rgba(255, 0, 0, 0.3);
   color: white;
 }
 
 #custom-ppd.performance {
-  border-top: 1px solid rgba(176, 0, 255, 0.933);
-  border-bottom: 1px solid rgba(176, 0, 255, 0.933);
+  border-top: 1px solid rgba(90, 79, 207, 0.933);
+  border-bottom: 1px solid rgba(90, 79, 207, 0.933);
   background-color: rgba(255, 0, 0, 0.3);
 }
 
 #custom-ppd.balanced {
-  border-top: 1px solid rgba(176, 0, 255, 0.933);
-  border-bottom: 1px solid rgba(176, 0, 255, 0.933);
+  border-top: 1px solid rgba(90, 79, 207, 0.933);
+  border-bottom: 1px solid rgba(90, 79, 207, 0.933);
   background-color: rgba(255, 255, 0, 0.3);
 }
 
 #custom-ppd.power-saver {
-  border-top: 1px solid rgba(176, 0, 255, 0.933);
-  border-bottom: 1px solid rgba(176, 0, 255, 0.933);
+  border-top: 1px solid rgba(90, 79, 207, 0.933);
+  border-bottom: 1px solid rgba(90, 79, 207, 0.933);
   background-color: rgba(0, 255, 0, 0.3);
 }
 
@@ -88,7 +88,7 @@ window#waybar {
 #custom-ppd:hover,
 #custom-power-off-button:hover {
   background-color: rgba(255, 255, 255, 1);
-  border-top: 1px solid rgba(176, 0, 255, 0.933);
-  border-bottom: 1px solid rgba(176, 0, 255, 0.933);
+  border-top: 1px solid rgba(90, 79, 207, 0.933);
+  border-bottom: 1px solid rgba(90, 79, 207, 0.933);
   color: black;
 }
