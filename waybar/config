@@ -22,7 +22,6 @@
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "width": 1910,
   "height": 26,
-  "output": "eDP-1",
 
   "custom/docker": {
     "format": " {}",
