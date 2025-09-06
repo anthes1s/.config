@@ -7,6 +7,8 @@
   "modules-center": ["clock"],
   "modules-right": [
     "custom/start",
+    "tray",
+    "custom/separator",
     "cpu", 
     "custom/separator", 
     "memory",
@@ -26,6 +28,11 @@
   ],
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "height": 26,
+
+  "tray": {
+    "spacing": 4,
+    "expand": false,
+  },
 
   "custom/ppd": {
     "format": "{}",

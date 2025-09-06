@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo pacman -Syu hyprland uwsm hyprpaper power-profiles-daemon docker docker-buildx docker-compose git firefox waybar brightnessctl alacritty neovim gcc make ripgrep fd unzip nodejs-lts-jod npm ttf-font-awesome otf-font-awesome woff2-font-awesome ttf-hack-nerd polkit libnewt wofi nautilus grim wl-clipboard mesa lib32-mesa amdvlk lib32-amdvlk linux-firmware-amdgpu python-gobject xf86-video-amdgpu hyprsunset vulkan-radeon lib32-vulkan-radeon lua51 luarocks wget
+sudo pacman -Syu hyprland uwsm hyprpaper power-profiles-daemon docker docker-buildx docker-compose git firefox waybar brightnessctl alacritty neovim gcc make ripgrep fd unzip nodejs-lts-jod npm ttf-font-awesome otf-font-awesome woff2-font-awesome ttf-hack-nerd polkit libnewt wofi nautilus grim wl-clipboard mesa lib32-mesa amdvlk lib32-amdvlk linux-firmware-amdgpu python-gobject xf86-video-amdgpu hyprsunset vulkan-radeon lib32-vulkan-radeon lua51 luarocks wget slurp
 
 cp ./.bashrc ~/
 echo '[SUCCESS] Copied .bashrc to $HOME'
