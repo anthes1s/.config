@@ -18,8 +18,13 @@ vim.g.maplocalleader = ' '
 
 vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { silent = true, noremap = true })
 
+-- Map <leader>d in normal mode to show diagnostics in a floating window
+vim.keymap.set('n', '<leader>d', function()
+  vim.diagnostic.open_float()
+end, { noremap = true, silent = true, desc = 'Show diagnostics in float' })
+
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
