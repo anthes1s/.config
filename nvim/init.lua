@@ -16,7 +16,16 @@ vim.keymap.set('', ';', 'l', { noremap = true })
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { silent = true, noremap = true })
+vim.keymap.set('n', '<leader>e', function()
+  local nvim_tree = require 'nvim-tree.api'
+  local view = require 'nvim-tree.view'
+
+  if view.is_visible() then
+    nvim_tree.tree.focus()
+  else
+    nvim_tree.tree.open()
+  end
+end, { desc = 'Toggle/Focus nvim-tree' })
 
 -- Map <leader>d in normal mode to show diagnostics in a floating window
 vim.keymap.set('n', '<leader>d', function()
@@ -211,7 +220,7 @@ require('lazy').setup({
         sort = { sorter = 'case_sensitive' },
         view = { width = 30 },
         renderer = { group_empty = true },
-        filters = { dotfiles = false },
+        filters = { dotfiles = true },
       },
     },
     'lewis6991/gitsigns.nvim',
