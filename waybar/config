@@ -49,17 +49,17 @@
   },
 
   "custom/end": {
-    "format": "]",
+    "format": " ",
     "tooltip": false
   },
 
   "custom/start": {
-    "format": "[",
+    "format": " ",
     "tooltip": false
   },
 
   "custom/separator": {
-    "format": "|",
+    "format": " ",
     "tooltip": false
   },
 
