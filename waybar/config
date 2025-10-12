@@ -23,6 +23,8 @@
     "custom/separator", 
     "custom/docker",
     "custom/separator",
+    "custom/suspend-button",
+    "custom/separator",
     "custom/power-off-button",
     "custom/end"
   ],
@@ -68,20 +70,33 @@
     "on-click": "systemctl poweroff"
   },
 
+  "custom/suspend-button": {
+    "format": "󰒲",
+    "on-click": "systemctl suspend"
+  },
+
   "clock": {
     "format": "{:%Y-%m-%d %H:%M}"
   },
 
   "cpu": {
-    "format": " {usage}%"
+    "format": " {usage}%"
   },
 
   "memory": {
-    "format": " {used:0.1f}g/{total:0.1f}g"
+    "format": " {used:0.1f}g/{total:0.1f}g"
   },
 
   "battery": {
-    "format": "  {capacity}%"
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "states": {
+        "good": 80,
+        "warning": 20,
+        "critical": 10
+    }
   },
 
   "network": {
@@ -93,7 +108,8 @@
   },
 
   "wireplumber": {
-    "format": "  {volume}%",
-    "format-muted": ""
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": ["", "", ""]
   }
 }
