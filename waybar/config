@@ -8,25 +8,25 @@
   "modules-right": [
     "custom/start",
     "tray",
+
     "custom/separator",
     "cpu", 
+
     "custom/separator", 
     "memory",
+
     "custom/separator", 
-    "battery",
-    "custom/separator", 
-    "network",
+
     "custom/separator", 
     "wireplumber",
+
     "custom/separator", 
+    "battery",
+    "network",
     "custom/ppd",
-    "custom/separator", 
     "custom/docker",
-    "custom/separator",
     "custom/suspend-button",
-    "custom/separator",
     "custom/power-off-button",
-    "custom/end"
   ],
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "height": 26,
@@ -38,13 +38,13 @@
 
   "custom/ppd": {
     "format": "{}",
-    "exec": "bash -c 'profile=$(powerprofilesctl get 2>/dev/null || echo \"unknown\"); case \"$profile\" in performance) icon=\"\"; cls=\"performance\";; balanced) icon=\"\"; cls=\"balanced\";; \"power-saver\") icon=\"\"; cls=\"power-saver\";; *) icon=\"?\"; cls=\"unknown\";; esac; printf \"{\\\"text\\\": \\\"%s %s\\\", \\\"class\\\": \\\"%s\\\"}\\n\" \"$icon\" \"$profile\" \"$cls\"'",
+    "exec": "bash -c 'profile=$(powerprofilesctl get 2>/dev/null || echo \"unknown\"); case \"$profile\" in performance) icon=\" \"; cls=\"performance\";; balanced) icon=\" \"; cls=\"balanced\";; \"power-saver\") icon=\" \"; cls=\"power-saver\";; *) icon=\"?\"; cls=\"unknown\";; esac; printf \"{\\\"text\\\": \\\"%s\\\", \\\"class\\\": \\\"%s\\\"}\\n\" \"$icon\" \"$cls\"'",
     "return-type": "json",
     "interval": 3,
   },
 
   "custom/docker": {
-    "format": " {}",
+    "format": "<span></span>",
     "exec": "bash -c 'if systemctl is-active --quiet docker.service; then echo \"{\\\"text\\\": \\\"up\\\", \\\"class\\\": \\\"docker-up\\\"}\"; else echo \"{\\\"text\\\": \\\"down\\\", \\\"class\\\": \\\"docker-down\\\"}\"; fi'",
     "return-type": "json",
     "interval": 3,
@@ -66,12 +66,12 @@
   },
 
   "custom/power-off-button": {
-    "format": "",
+    "format": "<span></span>",
     "on-click": "systemctl poweroff"
   },
 
   "custom/suspend-button": {
-    "format": "󰒲",
+    "format": "<span>󰒲</span>",
     "on-click": "systemctl suspend"
   },
 
@@ -80,17 +80,17 @@
   },
 
   "cpu": {
-    "format": " {usage}%"
+    "format": "<span></span> {usage}%"
   },
 
   "memory": {
-    "format": " {used:0.1f}g/{total:0.1f}g"
+    "format": "<span></span> {used:0.1f}g/{total:0.1f}g"
   },
 
   "battery": {
-    "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
+    "format": "<span>{icon}</span>",
+    "format-charging": "<span></span>",
+    "format-plugged": "<span></span>",
     "format-icons": ["", "", "", "", ""],
     "states": {
         "good": 80,
@@ -100,16 +100,16 @@
   },
 
   "network": {
-    "format-wifi": " ",
-    "format-ethernet": " {ifname}",
-    "format-disconnected": "",
+    "format-wifi": "<span></span> ",
+    "format-ethernet": "<span></span> {ifname}",
+    "format-disconnected": "<span></span>",
     "tooltip": true, 
     "tooltip-format": "{essid} {signalStrength}%"
   },
 
   "wireplumber": {
-    "format": "{icon} {volume}%",
-    "format-muted": "",
+    "format": "<span>{icon}</span> {volume}%",
+    "format-muted": "<span></span>",
     "format-icons": ["", "", ""]
   }
 }
