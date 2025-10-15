@@ -47,11 +47,15 @@ window#waybar {
   background-color: rgba(249, 226, 175, 1);
   border-top: 1px solid rgba(90, 79, 207, 0.95);
   border-bottom: 1px solid rgba(90, 79, 207, 0.95);
+  border-left: 1px solid rgba(90, 79, 207, 0.95);
 }
 
+#cpu,
+#memory,
 #wireplumber {
-  padding-right: 13px;
-  border-left: 1px solid rgba(90, 79, 207, 0.95);
+  padding-right: 11px;
+  border-top: 1px solid rgba(90, 79, 207, 0.95);
+  border-bottom: 1px solid rgba(90, 79, 207, 0.95);
 }
 
 #battery {
@@ -184,6 +188,25 @@ window#waybar {
 #battery.veryhigh { background-color: rgba(193, 227, 165, 1); }
 #battery.full{ background-color: rgba(166, 227, 161, 1); }
 
+#cpu.dead { background-color: rgba(243, 139, 148, 1); } 
+#cpu.verylow { background-color: rgba(243, 139, 148, 1); } 
+#cpu.low { background-color: rgba(246, 168, 155, 1); }
+#cpu.mediumlow { background-color: rgba(249, 197, 168, 1); }
+#cpu.medium { background-color: rgba(249, 226, 175, 1); } 
+#cpu.mediumhigh { background-color: rgba(249, 226, 175, 1); }
+#cpu.high { background-color: rgba(220, 227, 168, 1); }
+#cpu.veryhigh { background-color: rgba(193, 227, 165, 1); }
+#cpu.full{ background-color: rgba(166, 227, 161, 1); }
+
+#memory.dead { background-color: rgba(243, 139, 148, 1); } 
+#memory.verylow { background-color: rgba(243, 139, 148, 1); } 
+#memory.low { background-color: rgba(246, 168, 155, 1); }
+#memory.mediumlow { background-color: rgba(249, 197, 168, 1); }
+#memory.medium { background-color: rgba(249, 226, 175, 1); } 
+#memory.mediumhigh { background-color: rgba(249, 226, 175, 1); }
+#memory.high { background-color: rgba(220, 227, 168, 1); }
+#memory.veryhigh { background-color: rgba(193, 227, 165, 1); }
+#memory.full{ background-color: rgba(166, 227, 161, 1); }
 
 #clock:hover,
 #cpu:hover,

@@ -8,16 +8,9 @@
   "modules-right": [
     "custom/start",
     "tray",
-
     "custom/separator",
     "cpu", 
-
-    "custom/separator", 
     "memory",
-
-    "custom/separator", 
-
-    "custom/separator", 
     "wireplumber",
     "battery",
     "network",
@@ -78,11 +71,33 @@
   },
 
   "cpu": {
-    "format": "<span></span> {usage}%"
+    "format": "<span></span>",
+    "states": {
+        "full": 0,
+        "veryhigh": 10,
+        "high": 20,
+        "mediumhigh": 30,
+        "medium": 40,
+        "mediumlow": 50,
+        "low": 60,
+        "verylow": 70,
+        "dead": 80
+    }
   },
 
   "memory": {
-    "format": "<span></span> {used:0.1f}g/{total:0.1f}g"
+    "format": "<span></span>",
+    "states": {
+        "full": 0,
+        "veryhigh": 10,
+        "high": 20,
+        "mediumhigh": 30,
+        "medium": 40,
+        "mediumlow": 50,
+        "low": 60,
+        "verylow": 70,
+        "dead": 80
+    }
   },
 
   "battery": {
