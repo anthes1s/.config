@@ -28,7 +28,7 @@ window#waybar {
   padding: 0 5px;
 }
 
-#wireplumber,
+#wireplumber, /* ADDED to this block */
 #battery,
 #custom-power-off-button, 
 #custom-suspend-button {
@@ -73,6 +73,9 @@ window#waybar {
   }
 }
 
+/* --- UPDATED STATUS STYLING START --- */
+
+/* Shared Border and Text Color */
 #custom-docker.docker-up,
 #custom-docker.docker-down,
 #custom-ppd.performance,
@@ -81,34 +84,41 @@ window#waybar {
 #network.wifi,
 #network.ethernet,
 #network.disconnected,
+/* Battery Selectors */
 #battery,
 #battery.charging,
 #battery.warning,
 #battery.critical,
+/* Wireplumber Selectors */
 #wireplumber,
 #wireplumber.muted {
     border-top: 1px solid rgba(90, 79, 207, 0.933);
     border-bottom: 1px solid rgba(90, 79, 207, 0.933);
-    color: rgba(25, 25, 25, 0.5); 
+    color: rgba(25, 25, 25, 0.5); /* Dark icon/text color */
 }
 
+/* BATTERY STATUS STYLES */
+
+/* Base Battery (Normal/Good State) */
 #battery {
-    background-color: rgba(166, 227, 161, 1); 
+    background-color: rgba(166, 227, 161, 1); /* Opaque Pale Green */
 }
 
 #battery.warning {
-    background-color: rgba(249, 226, 175, 1); 
+    background-color: rgba(249, 226, 175, 1); /* Opaque Pale Yellow */
 }
 
+/* Retain animation for critical, override color/background */
 #battery.critical {
-    background-color: rgba(243, 139, 148, 1); 
+    background-color: rgba(243, 139, 148, 1); /* Opaque Pale Red */
     animation: blink 1s ease-in-out infinite;
 }
 
 #battery.charging {
-    background-color: rgba(166, 227, 161, 1); 
+    background-color: rgba(166, 227, 161, 1); /* Opaque Pale Green */
 }
 
+/* DOCKER STATUS */
 #custom-docker.docker-up {
   background-color: rgba(166, 227, 161, 1);
 }
@@ -117,6 +127,7 @@ window#waybar {
   background-color: rgba(243, 139, 148, 1);
 }
 
+/* PPD STATUS */
 #custom-ppd.performance {
   background-color: rgba(243, 139, 148, 1);
 }
@@ -129,8 +140,9 @@ window#waybar {
   background-color: rgba(166, 227, 161, 1);
 }
 
+/* NETWORK STATUS */
 #network {
-    color: white;
+    color: white; /* Base network icon color remains white, overridden by shared block if in a specific state */
 }
 
 #network.disconnected {
@@ -143,12 +155,38 @@ window#waybar {
 }
 
 #network.disconnected {
+    /* Retained for icon color when disconnected */
     color: #f38ba8; 
 }
 
+/* WIREPLUMBER STATUS - Volume Gradient */
+
+/* Base Wireplumber for smooth color transition */
 #wireplumber {
+    transition: background-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    /* Default background for non-classed volumes above 0 */
     background-color: rgba(166, 227, 161, 1); 
 }
+
+/* Volume-based colors (from low/red to high/green) */
+/* The volume classes are dynamically applied by Waybar (e.g., .volume-10, .volume-50, etc.) */
+
+#wireplumber.silent { background-color: rgba(243, 139, 148, 1); } 
+#wireplumber.verylow { background-color: rgba(243, 139, 148, 1); } 
+
+#wireplumber.low { background-color: rgba(246, 168, 155, 1); }
+
+#wireplumber.mediumlow { background-color: rgba(249, 197, 168, 1); }
+
+#wireplumber.medium { background-color: rgba(249, 226, 175, 1); } 
+
+#wireplumber.mediumhigh { background-color: rgba(249, 226, 175, 1); }
+
+#wireplumber.high { background-color: rgba(220, 227, 168, 1); }
+
+#wireplumber.veryhigh { background-color: rgba(193, 227, 165, 1); }
+
+#wireplumber.loud { background-color: rgba(166, 227, 161, 1); }
 
 #wireplumber.muted {
     background-color: rgba(243, 139, 148, 1); 
