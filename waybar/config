@@ -36,7 +36,7 @@
 
   "custom/ppd": {
     "format": "{}",
-    "exec": "bash -c 'profile=$(powerprofilesctl get 2>/dev/null || echo \"unknown\"); case \"$profile\" in performance) icon=\" \"; cls=\"performance\";; balanced) icon=\" \"; cls=\"balanced\";; \"power-saver\") icon=\" \"; cls=\"power-saver\";; *) icon=\"?\"; cls=\"unknown\";; esac; printf \"{\\\"text\\\": \\\"%s\\\", \\\"class\\\": \\\"%s\\\"}\\n\" \"$icon\" \"$cls\"'",
+    "exec": "bash -c 'profile=$(powerprofilesctl get 2>/dev/null || echo \"unknown\"); case \"$profile\" in performance) icon=\"\"; cls=\"performance\";; balanced) icon=\" \"; cls=\"balanced\";; \"power-saver\") icon=\"\"; cls=\"power-saver\";; *) icon=\"?\"; cls=\"unknown\";; esac; printf \"{\\\"text\\\": \\\"%s\\\", \\\"class\\\": \\\"%s\\\"}\\n\" \"$icon\" \"$cls\"'",
     "return-type": "json",
     "interval": 3,
   },

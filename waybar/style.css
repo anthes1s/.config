@@ -42,6 +42,10 @@ window#waybar {
   padding-right: 5px;
 }
 
+#custom-ppd {
+  min-width: 18px;
+}
+
 #workspaces {
   margin: 0;
 }
