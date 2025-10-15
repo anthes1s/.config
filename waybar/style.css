@@ -36,14 +36,14 @@ window#waybar {
 
 
 #custom-power-off-button {
-  color: white;
+  color: rgba(25, 25, 25, 0.5);
   background-color: rgba(243, 139, 148, 1);
   border-top: 1px solid rgba(90, 79, 207, 0.95);
   border-bottom: 1px solid rgba(90, 79, 207, 0.95);
   border-right: 1px solid rgba(90, 79, 207, 0.95);
 }
 #custom-suspend-button {
-  color: white;
+  color: rgba(25, 25, 25, 0.5);
   background-color: rgba(249, 226, 175, 1);
   border-top: 1px solid rgba(90, 79, 207, 0.95);
   border-bottom: 1px solid rgba(90, 79, 207, 0.95);
@@ -55,14 +55,16 @@ window#waybar {
   padding-right: 11px;
   border-top: 1px solid rgba(90, 79, 207, 0.95);
   border-bottom: 1px solid rgba(90, 79, 207, 0.95);
+  color: rgba(25, 25, 25, 0.5);
+}
+
+
+#custom-ppd {
+  padding-right: 9px;
 }
 
 #battery {
   padding-right: 5px;
-}
-
-#custom-ppd {
-  min-width: 18px;
 }
 
 #workspaces {
@@ -80,7 +82,7 @@ window#waybar {
 
 #workspaces button.active {
   background-color: rgba(255, 255, 255, 1);
-  color: black;
+  color: rgba(25, 25, 25, 0.5);
   font-weight: bold;
 }
 
@@ -114,7 +116,7 @@ window#waybar {
 #wireplumber.muted {
     border-top: 1px solid rgba(90, 79, 207, 0.933);
     border-bottom: 1px solid rgba(90, 79, 207, 0.933);
-    color: white; 
+  color: rgba(25, 25, 25, 0.5);
     background-color: rgba(166, 227, 161, 1); 
 }
 
@@ -143,7 +145,8 @@ window#waybar {
 }
 
 #network {
-    color: white; }
+  color: rgba(25, 25, 25, 0.5);
+}
 
 #network.disconnected {
   background-color: rgba(243, 139, 148, 1);
@@ -155,7 +158,7 @@ window#waybar {
 }
 
 #network.disconnected {
-    color: #f38ba8; 
+  color: rgba(25, 25, 25, 0.5);
 }
 
 #wireplumber {

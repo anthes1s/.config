@@ -29,13 +29,15 @@
 
   "custom/ppd": {
     "format": "{}",
-    "exec": "bash -c 'profile=$(powerprofilesctl get 2>/dev/null || echo \"unknown\"); case \"$profile\" in performance) icon=\"\"; cls=\"performance\";; balanced) icon=\" \"; cls=\"balanced\";; \"power-saver\") icon=\"\"; cls=\"power-saver\";; *) icon=\"?\"; cls=\"unknown\";; esac; printf \"{\\\"text\\\": \\\"%s\\\", \\\"class\\\": \\\"%s\\\"}\\n\" \"$icon\" \"$cls\"'",
+    "interval": 1,
+    "exec": "bash -c 'profile=$(powerprofilesctl get 2>/dev/null || echo \"unknown\"); case \"$profile\" in performance) icon=\"\"; cls=\"performance\";; balanced) icon=\" \"; cls=\"balanced\";; \"power-saver\") icon=\"󰌪\"; cls=\"power-saver\";; *) icon=\"?\"; cls=\"unknown\";; esac; printf \"{\\\"text\\\": \\\"%s\\\", \\\"class\\\": \\\"%s\\\"}\\n\" \"$icon\" \"$cls\"'",
     "return-type": "json",
     "interval": 3,
   },
 
   "custom/docker": {
     "format": "<span></span>",
+    "interval": 1,
     "exec": "bash -c 'if systemctl is-active --quiet docker.service; then echo \"{\\\"text\\\": \\\"up\\\", \\\"class\\\": \\\"docker-up\\\"}\"; else echo \"{\\\"text\\\": \\\"down\\\", \\\"class\\\": \\\"docker-down\\\"}\"; fi'",
     "return-type": "json",
     "interval": 3,
@@ -72,6 +74,7 @@
 
   "cpu": {
     "format": "<span></span>",
+    "interval": 1,
     "states": {
         "full": 0,
         "veryhigh": 10,
@@ -87,6 +90,7 @@
 
   "memory": {
     "format": "<span></span>",
+    "interval": 1,
     "states": {
         "full": 0,
         "veryhigh": 10,
@@ -105,6 +109,7 @@
     "format-charging": "<span> {capacity}%</span>",
     "format-plugged": "<span> {capacity}%</span>",
     "format-icons": ["", "", "", "", ""],
+    "interval": 1,
     "states": {
         "full": 90,
         "veryhigh": 80,
@@ -122,6 +127,7 @@
     "format-wifi": "<span></span> ",
     "format-ethernet": "<span></span> {ifname}",
     "format-disconnected": "<span></span>",
+    "interval": 1,
     "tooltip": true, 
     "tooltip-format": "{essid} {signalStrength}%"
   },
