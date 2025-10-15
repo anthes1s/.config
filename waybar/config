@@ -86,14 +86,20 @@
   },
 
   "battery": {
-    "format": "<span>{icon}</span>",
+    "format": "<span>{icon} {capacity}%</span>",
     "format-charging": "<span></span>",
     "format-plugged": "<span></span>",
     "format-icons": ["", "", "", "", ""],
     "states": {
-        "good": 80,
-        "warning": 20,
-        "critical": 10
+        "full": 90,
+        "veryhigh": 80,
+        "high": 70,
+        "mediumhigh": 60,
+        "medium": 50,
+        "mediumlow": 40,
+        "low": 30,
+        "verylow": 20,
+        "dead": 0
     }
   },
 
