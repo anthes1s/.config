@@ -28,6 +28,7 @@ window#waybar {
   padding: 0 5px;
 }
 
+#wireplumber,
 #battery,
 #custom-power-off-button, 
 #custom-suspend-button {
@@ -58,18 +59,7 @@ window#waybar {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-#battery.warning {
-  color: #f9e2af;
-}
-
-#battery.critical {
-  color: #f38ba8;
-  animation: blink 1s ease-in-out infinite;
-}
-
-#battery.charging {
-  color: #a6e3a1;
-}
+/* Original Battery color styles removed, superseded by new rules below */
 
 @keyframes blink {
   0% {
@@ -90,10 +80,33 @@ window#waybar {
 #custom-ppd.power-saver,
 #network.wifi,
 #network.ethernet,
-#network.disconnected {
+#network.disconnected,
+#battery,
+#battery.charging,
+#battery.warning,
+#battery.critical,
+#wireplumber,
+#wireplumber.muted {
     border-top: 1px solid rgba(90, 79, 207, 0.933);
     border-bottom: 1px solid rgba(90, 79, 207, 0.933);
     color: rgba(25, 25, 25, 0.5); 
+}
+
+#battery {
+    background-color: rgba(166, 227, 161, 1); 
+}
+
+#battery.warning {
+    background-color: rgba(249, 226, 175, 1); 
+}
+
+#battery.critical {
+    background-color: rgba(243, 139, 148, 1); 
+    animation: blink 1s ease-in-out infinite;
+}
+
+#battery.charging {
+    background-color: rgba(166, 227, 161, 1); 
 }
 
 #custom-docker.docker-up {
@@ -130,11 +143,15 @@ window#waybar {
 }
 
 #network.disconnected {
-  color: #f38ba8; 
+    color: #f38ba8; 
+}
+
+#wireplumber {
+    background-color: rgba(166, 227, 161, 1); 
 }
 
 #wireplumber.muted {
-  color: #f38ba8;
+    background-color: rgba(243, 139, 148, 1); 
 }
 
 #clock:hover,

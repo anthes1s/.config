@@ -19,8 +19,6 @@
 
     "custom/separator", 
     "wireplumber",
-
-    "custom/separator", 
     "battery",
     "network",
     "custom/ppd",
@@ -108,8 +106,8 @@
   },
 
   "wireplumber": {
-    "format": "<span>{icon}</span> {volume}%",
-    "format-muted": "<span></span>",
+    "format": "<span>{icon}</span>",
+    "format-muted": "",
     "format-icons": ["", "", ""]
   }
 }
