@@ -14,6 +14,7 @@ window#waybar {
   padding: 0;
 }
 
+/* Base padding for all widgets */
 #clock,
 #cpu,
 #memory,
@@ -28,27 +29,26 @@ window#waybar {
   padding: 0 5px;
 }
 
+/* Power buttons */
 #custom-power-off-button, 
 #custom-suspend-button {
   padding-right: 10px;
   transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  color: rgba(25, 25, 25, 0.5);
+  border-top: 1px solid rgba(90, 79, 207, 0.95);
+  border-bottom: 1px solid rgba(90, 79, 207, 0.95);
 }
-
 
 #custom-power-off-button {
-  color: rgba(25, 25, 25, 0.5);
   background-color: rgba(243, 139, 148, 1);
-  border-top: 1px solid rgba(90, 79, 207, 0.95);
-  border-bottom: 1px solid rgba(90, 79, 207, 0.95);
   border-right: 1px solid rgba(90, 79, 207, 0.95);
 }
+
 #custom-suspend-button {
-  color: rgba(25, 25, 25, 0.5);
   background-color: rgba(249, 226, 175, 1);
-  border-top: 1px solid rgba(90, 79, 207, 0.95);
-  border-bottom: 1px solid rgba(90, 79, 207, 0.95);
 }
 
+/* Widgets with borders and adjusted padding */
 #cpu,
 #memory,
 #wireplumber {
@@ -58,7 +58,6 @@ window#waybar {
   color: rgba(25, 25, 25, 0.5);
 }
 
-
 #custom-ppd {
   padding-right: 9px;
 }
@@ -67,6 +66,7 @@ window#waybar {
   padding-right: 5px;
 }
 
+/* Workspaces */
 #workspaces {
   margin: 0;
 }
@@ -90,38 +90,11 @@ window#waybar {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-#custom-docker.docker-up,
-#custom-docker.docker-down,
-#custom-ppd.performance,
-#custom-ppd.balanced,
-#custom-ppd.power-saver,
-#network.wifi,
-#network.ethernet,
-#network.disconnected,
-#battery,
-#battery.charging,
-#wireplumber,
-#wireplumber.muted {
-    border-top: 1px solid rgba(90, 79, 207, 0.933);
-    border-bottom: 1px solid rgba(90, 79, 207, 0.933);
+/* Docker status */
+#custom-docker {
+  border-top: 1px solid rgba(90, 79, 207, 0.933);
+  border-bottom: 1px solid rgba(90, 79, 207, 0.933);
   color: rgba(25, 25, 25, 0.5);
-    background-color: rgba(166, 227, 161, 1); 
-}
-
-#battery.charging {
-    background-color: rgba(166, 227, 161, 1); 
 }
 
 #custom-docker.docker-up {
@@ -130,6 +103,13 @@ window#waybar {
 
 #custom-docker.docker-down {
   background-color: rgba(243, 139, 148, 1);
+}
+
+/* Power profiles */
+#custom-ppd {
+  border-top: 1px solid rgba(90, 79, 207, 0.933);
+  border-bottom: 1px solid rgba(90, 79, 207, 0.933);
+  color: rgba(25, 25, 25, 0.5);
 }
 
 #custom-ppd.performance {
@@ -144,90 +124,107 @@ window#waybar {
   background-color: rgba(166, 227, 161, 1);
 }
 
+/* Network widget - FIXED */
 #network {
   color: rgba(25, 25, 25, 0.5);
+  border-top: 1px solid rgba(90, 79, 207, 0.933);
+  border-bottom: 1px solid rgba(90, 79, 207, 0.933);
 }
 
-#network.disconnected {
-  background-color: rgba(243, 139, 148, 1);
-}
-
-#network.wifi,
+/* Ethernet always shows green (no signal strength to measure) */
 #network.ethernet {
   background-color: rgba(166, 227, 161, 1);
 }
 
+/* WiFi default state */
+#network.wifi {
+  background-color: rgba(166, 227, 161, 1);
+}
+
+/* Disconnected state */
 #network.disconnected {
-  color: rgba(25, 25, 25, 0.5);
+  background-color: rgba(243, 139, 148, 1);
 }
 
+/* WiFi signal strength levels */
+#network.wifi.full { background-color: rgba(166, 227, 161, 1); }
+#network.wifi.veryhigh { background-color: rgba(193, 227, 165, 1); }
+#network.wifi.high { background-color: rgba(220, 227, 168, 1); }
+#network.wifi.mediumhigh { background-color: rgba(249, 226, 175, 1); }
+#network.wifi.medium { background-color: rgba(249, 226, 175, 1); }
+#network.wifi.mediumlow { background-color: rgba(249, 197, 168, 1); }
+#network.wifi.low { background-color: rgba(246, 168, 155, 1); }
+#network.wifi.verylow { background-color: rgba(243, 139, 148, 1); }
+#network.wifi.dead { background-color: rgba(243, 139, 148, 1); }
+
+/* Wireplumber */
 #wireplumber {
-    transition: background-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-    background-color: rgba(166, 227, 161, 1); 
+  transition: background-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  background-color: rgba(166, 227, 161, 1); 
 }
 
-#wireplumber.silent { background-color: rgba(243, 139, 148, 1); } 
-#wireplumber.verylow { background-color: rgba(243, 139, 148, 1); } 
-#wireplumber.low { background-color: rgba(246, 168, 155, 1); }
-#wireplumber.mediumlow { background-color: rgba(249, 197, 168, 1); }
-#wireplumber.medium { background-color: rgba(249, 226, 175, 1); } 
-#wireplumber.mediumhigh { background-color: rgba(249, 226, 175, 1); }
-#wireplumber.high { background-color: rgba(220, 227, 168, 1); }
-#wireplumber.veryhigh { background-color: rgba(193, 227, 165, 1); }
 #wireplumber.loud { background-color: rgba(166, 227, 161, 1); }
+#wireplumber.veryhigh { background-color: rgba(193, 227, 165, 1); }
+#wireplumber.high { background-color: rgba(220, 227, 168, 1); }
+#wireplumber.mediumhigh { background-color: rgba(249, 226, 175, 1); }
+#wireplumber.medium { background-color: rgba(249, 226, 175, 1); }
+#wireplumber.mediumlow { background-color: rgba(249, 197, 168, 1); }
+#wireplumber.low { background-color: rgba(246, 168, 155, 1); }
+#wireplumber.verylow { background-color: rgba(243, 139, 148, 1); }
+#wireplumber.silent { background-color: rgba(243, 139, 148, 1); }
+#wireplumber.muted { background-color: rgba(243, 139, 148, 1); }
 
-#wireplumber.muted {
-    background-color: rgba(243, 139, 148, 1); 
+/* Battery */
+#battery {
+  border-top: 1px solid rgba(90, 79, 207, 0.933);
+  border-bottom: 1px solid rgba(90, 79, 207, 0.933);
+  color: rgba(25, 25, 25, 0.5);
+  background-color: rgba(166, 227, 161, 1);
 }
 
-#battery.dead { background-color: rgba(243, 139, 148, 1); } 
-#battery.verylow { background-color: rgba(243, 139, 148, 1); } 
-#battery.low { background-color: rgba(246, 168, 155, 1); }
-#battery.mediumlow { background-color: rgba(249, 197, 168, 1); }
-#battery.medium { background-color: rgba(249, 226, 175, 1); } 
-#battery.mediumhigh { background-color: rgba(249, 226, 175, 1); }
-#battery.high { background-color: rgba(220, 227, 168, 1); }
+#battery.charging {
+  background-color: rgba(166, 227, 161, 1);
+}
+
+#battery.full { background-color: rgba(166, 227, 161, 1); }
 #battery.veryhigh { background-color: rgba(193, 227, 165, 1); }
-#battery.full{ background-color: rgba(166, 227, 161, 1); }
+#battery.high { background-color: rgba(220, 227, 168, 1); }
+#battery.mediumhigh { background-color: rgba(249, 226, 175, 1); }
+#battery.medium { background-color: rgba(249, 226, 175, 1); }
+#battery.mediumlow { background-color: rgba(249, 197, 168, 1); }
+#battery.low { background-color: rgba(246, 168, 155, 1); }
+#battery.verylow { background-color: rgba(243, 139, 148, 1); }
+#battery.dead { background-color: rgba(243, 139, 148, 1); }
 
-#network.dead { background-color: rgba(243, 139, 148, 1); } 
-#network.verylow { background-color: rgba(243, 139, 148, 1); } 
-#network.low { background-color: rgba(246, 168, 155, 1); }
-#network.mediumlow { background-color: rgba(249, 197, 168, 1); }
-#network.medium { background-color: rgba(249, 226, 175, 1); } 
-#network.mediumhigh { background-color: rgba(249, 226, 175, 1); }
-#network.high { background-color: rgba(220, 227, 168, 1); }
-#network.veryhigh { background-color: rgba(193, 227, 165, 1); }
-#network.full{ background-color: rgba(166, 227, 161, 1); }
-
-
-#cpu.dead { background-color: rgba(243, 139, 148, 1); } 
-#cpu.verylow { background-color: rgba(243, 139, 148, 1); } 
-#cpu.low { background-color: rgba(246, 168, 155, 1); }
-#cpu.mediumlow { background-color: rgba(249, 197, 168, 1); }
-#cpu.medium { background-color: rgba(249, 226, 175, 1); } 
-#cpu.mediumhigh { background-color: rgba(249, 226, 175, 1); }
-#cpu.high { background-color: rgba(220, 227, 168, 1); }
+/* CPU */
+#cpu.full { background-color: rgba(166, 227, 161, 1); }
 #cpu.veryhigh { background-color: rgba(193, 227, 165, 1); }
-#cpu.full{ background-color: rgba(166, 227, 161, 1); }
+#cpu.high { background-color: rgba(220, 227, 168, 1); }
+#cpu.mediumhigh { background-color: rgba(249, 226, 175, 1); }
+#cpu.medium { background-color: rgba(249, 226, 175, 1); }
+#cpu.mediumlow { background-color: rgba(249, 197, 168, 1); }
+#cpu.low { background-color: rgba(246, 168, 155, 1); }
+#cpu.verylow { background-color: rgba(243, 139, 148, 1); }
+#cpu.dead { background-color: rgba(243, 139, 148, 1); }
 
-#memory.dead { background-color: rgba(243, 139, 148, 1); } 
-#memory.verylow { background-color: rgba(243, 139, 148, 1); } 
-#memory.low { background-color: rgba(246, 168, 155, 1); }
-#memory.mediumlow { background-color: rgba(249, 197, 168, 1); }
-#memory.medium { background-color: rgba(249, 226, 175, 1); } 
-#memory.mediumhigh { background-color: rgba(249, 226, 175, 1); }
-#memory.high { background-color: rgba(220, 227, 168, 1); }
+/* Memory */
+#memory.full { background-color: rgba(166, 227, 161, 1); }
 #memory.veryhigh { background-color: rgba(193, 227, 165, 1); }
-#memory.full{ background-color: rgba(166, 227, 161, 1); }
+#memory.high { background-color: rgba(220, 227, 168, 1); }
+#memory.mediumhigh { background-color: rgba(249, 226, 175, 1); }
+#memory.medium { background-color: rgba(249, 226, 175, 1); }
+#memory.mediumlow { background-color: rgba(249, 197, 168, 1); }
+#memory.low { background-color: rgba(246, 168, 155, 1); }
+#memory.verylow { background-color: rgba(243, 139, 148, 1); }
+#memory.dead { background-color: rgba(243, 139, 148, 1); }
 
+/* Hover states */
 #clock:hover,
 #cpu:hover,
 #memory:hover,
 #battery:hover,
 #wireplumber:hover,
-#custom-docker.docker-up:hover,
-#custom-docker.docker-down:hover,
+#custom-docker:hover,
 #network:hover,
 #custom-ppd:hover,
 #custom-suspend-button:hover,
@@ -238,6 +235,7 @@ window#waybar {
   color: black;
 }
 
+/* Tray */
 #tray > .passive {
   -gtk-icon-effect: dim;
 }
@@ -246,4 +244,3 @@ window#waybar {
   -gtk-icon-effect: highlight;
   background-color: rgba(255, 0, 0, 0.3);
 }
-
