@@ -190,6 +190,17 @@ window#waybar {
 #battery.veryhigh { background-color: rgba(193, 227, 165, 1); }
 #battery.full{ background-color: rgba(166, 227, 161, 1); }
 
+#network.dead { background-color: rgba(243, 139, 148, 1); } 
+#network.verylow { background-color: rgba(243, 139, 148, 1); } 
+#network.low { background-color: rgba(246, 168, 155, 1); }
+#network.mediumlow { background-color: rgba(249, 197, 168, 1); }
+#network.medium { background-color: rgba(249, 226, 175, 1); } 
+#network.mediumhigh { background-color: rgba(249, 226, 175, 1); }
+#network.high { background-color: rgba(220, 227, 168, 1); }
+#network.veryhigh { background-color: rgba(193, 227, 165, 1); }
+#network.full{ background-color: rgba(166, 227, 161, 1); }
+
+
 #cpu.dead { background-color: rgba(243, 139, 148, 1); } 
 #cpu.verylow { background-color: rgba(243, 139, 148, 1); } 
 #cpu.low { background-color: rgba(246, 168, 155, 1); }

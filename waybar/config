@@ -129,7 +129,18 @@
     "format-disconnected": "<span></span>",
     "interval": 1,
     "tooltip": true, 
-    "tooltip-format": "{essid} {signalStrength}%"
+    "tooltip-format": "{essid} {signalStrength}%",
+    "states": {
+        "full": 90,
+        "veryhigh": 80,
+        "high": 70,
+        "mediumhigh": 60,
+        "medium": 50,
+        "mediumlow": 40,
+        "low": 30,
+        "verylow": 20,
+        "dead": 0
+    }
   },
 
   "wireplumber": {
