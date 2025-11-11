@@ -1,8 +1,9 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "Hack Nerd Font", monospace;
-  font-size: 13.5px;
+  font-family: "Cantarell", monospace;
+  font-size: 14px;
+  font-weight: bold;
   min-height: 0;
 }
 

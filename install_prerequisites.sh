@@ -11,5 +11,8 @@ echo '[SUCCESS] Copied .bash_profile to $HOME'
 sudo usermod -aG docker $USER
 echo "[SUCCESS] Added $USER to the docker group"
 
+sudo usermod -aG gamemode $USER
+echo "[SUCCESS] Added $USER to the gamemode group"
+
 echo none | sudo tee /sys/block/nvme0n1/queue/scheduler
 echo '[SUCCESS] Updated I/O scheduler'
