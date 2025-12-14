@@ -1,16 +1,14 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "Cantarell", monospace;
+  font-family: "Hack Nerd Font", "Cantarell", monospace;
   font-size: 14px;
-  font-weight: bold;
   min-height: 0;
 }
 
 window#waybar {
   color: white;
   background-color: rgba(25, 25, 25, 0.95);
-  border: 1px solid rgba(90, 79, 207, 0.95);
   margin: 0;
   padding: 0;
 }
