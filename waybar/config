@@ -105,7 +105,7 @@
 
   "battery": {
     "format": "<span>{icon} {capacity}%</span>",
-    "format-charging": "<span> {capacity}%</span>",
+    "format-charging": "<span>  {capacity}%</span>",
     "format-plugged": "<span> {capacity}%</span>",
     "format-icons": ["", "", "", "", ""],
     "interval": 1,
