@@ -35,13 +35,10 @@ window#waybar {
   padding-right: 10px;
   transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   color: rgba(25, 25, 25, 0.5);
-  border-top: 1px solid rgba(90, 79, 207, 0.95);
-  border-bottom: 1px solid rgba(90, 79, 207, 0.95);
 }
 
 #custom-power-off-button {
   background-color: rgba(243, 139, 148, 1);
-  border-right: 1px solid rgba(90, 79, 207, 0.95);
 }
 
 #custom-suspend-button {
@@ -53,8 +50,6 @@ window#waybar {
 #memory,
 #wireplumber {
   padding-right: 11px;
-  border-top: 1px solid rgba(90, 79, 207, 0.95);
-  border-bottom: 1px solid rgba(90, 79, 207, 0.95);
   color: rgba(25, 25, 25, 0.5);
 }
 
@@ -96,8 +91,6 @@ window#waybar {
 
 /* Docker status */
 #custom-docker {
-  border-top: 1px solid rgba(90, 79, 207, 0.933);
-  border-bottom: 1px solid rgba(90, 79, 207, 0.933);
   color: rgba(25, 25, 25, 0.5);
 }
 
@@ -111,8 +104,6 @@ window#waybar {
 
 /* Power profiles */
 #custom-ppd {
-  border-top: 1px solid rgba(90, 79, 207, 0.933);
-  border-bottom: 1px solid rgba(90, 79, 207, 0.933);
   color: rgba(25, 25, 25, 0.5);
 }
 
@@ -131,8 +122,6 @@ window#waybar {
 /* Network widget - FIXED */
 #network {
   color: rgba(25, 25, 25, 0.5);
-  border-top: 1px solid rgba(90, 79, 207, 0.933);
-  border-bottom: 1px solid rgba(90, 79, 207, 0.933);
 }
 
 /* Ethernet always shows green (no signal strength to measure) */
@@ -180,8 +169,6 @@ window#waybar {
 
 /* Battery */
 #battery {
-  border-top: 1px solid rgba(90, 79, 207, 0.933);
-  border-bottom: 1px solid rgba(90, 79, 207, 0.933);
   color: rgba(25, 25, 25, 0.5);
   background-color: rgba(166, 227, 161, 1);
 }
@@ -234,8 +221,6 @@ window#waybar {
 #custom-suspend-button:hover,
 #custom-power-off-button:hover {
   background-color: rgba(255, 255, 255, 1);
-  border-top: 1px solid rgba(90, 79, 207, 0.933);
-  border-bottom: 1px solid rgba(90, 79, 207, 0.933);
   color: black;
 }
 
